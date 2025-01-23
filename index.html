@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GomyCode HTML</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,19 +23,178 @@
         </div>
     </div>
 
-    <div class="container">
+    <section id="web-dev" class="row">
 
-        <div class="card">
-            <img src="./images/image.jpg" alt="" class="img">
-            <div class="card-body">
-                <h2 id="get-this">Hello world</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam harum perspiciatis possimus veniam animi sint voluptas nulla corrupti inventore unde iste voluptates deleniti non, voluptatibus natus repellendus adipisci esse iure.</p>
-                <button class="btn-primary" onclick="helloWorld()">More details ></button>
+        <div class="flex-between">
+            <div class="col">
+                <img src="./images/undraw_landing-page_tsx8.svg" alt="" width="600" height="400">
+            </div>
+
+            <div class="col">
+                <h1 class="lead">Pourquoi Apprendre le Développement Web ?</h1>
+                <p>Le développement web offre de nombreuses opportunités de carrière et vous permet de :
+                    <ul>
+                        <li><strong>Créer</strong> des projets web innovants.</li>
+                        <li><strong>Collaborer</strong> vec des équipes de développeurs</li>
+                        <li><strong>Apprendre</strong> des compétences recherchées dans un secteur en constante évolution.</li>
+                    </ul>
+                    C’est une porte ouverte vers de nombreuses opportunités professionnelles.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="video-player" class="row-w">
+
+        <div class="flex-between">
+            <div class="col">
+                <h1 class="lead">Live session video with the team</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat minus alias, architecto eaque qui eum numquam iure delectus doloribus voluptate tenetur ratione. Quae excepturi quasi ab tempora voluptatem consectetur.</p>
+            </div>
+            <div class="col">
+                <video width="600" height="350" controls>
+                    <source src="./videos/session-2.mp4">
+                </video>
             </div>
         </div>
 
-    </div>
+    </section>
 
+    <section id="git" class="row">
+        <div class="flex-between">
+            <div class="col">
+                <img src="./images/undraw_version-control_eiam.svg" alt="" width="600" height="400">
+            </div>
+            <div class="col">
+                <h1 class="lead">Qu'est-ce que Git et Pourquoi l'utiliser ?</h1>
+                <p>Git est un système de versionnage qui permet de suivre les modifications d'un projet. Il est essentiel pour :
+                    <ul>
+                        <li><strong>Gérer les versions</strong> de votre code.</li>
+                        <li><strong>Collaborer efficacement</strong> avec d'autres développeurs</li>
+                        <li><strong>Sécuriser</strong> vos projets en cas d'erreurs.</li>
+                    </ul>
+                    Git est un outil clé pour maintenir l'organisation, même dans des projets complexes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="git-2" class="row-w">
+        <div class="flex-between">
+
+            <div class="col">
+                <h1 class="lead">Comment Intégrer Git dans Votre Prochain Projet Web ?</h1>
+                <p>Git est un système de versionnage qui permet de suivre les modifications d'un projet. Il est essentiel pour :
+                    <ul>
+                        <li><strong>Gérer les versions</strong> de votre code.</li>
+                        <li><strong>Collaborer efficacement</strong> avec d'autres développeurs</li>
+                        <li><strong>Sécuriser</strong> vos projets en cas d'erreurs.</li>
+                    </ul>
+                    Git est un outil clé pour maintenir l'organisation, même dans des projets complexes.
+                </p>
+            </div>
+            <div class="col">
+                <img src="./images/undraw_version-control_eiam.svg" alt="" width="600" height="400">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="row">
+        <div class="container flex-around">
+
+            <div class="card col-3">
+                <div class="card-body">
+                    <i class="fa-regular fa-square-plus fa-4x" style="color: blueviolet;"></i>
+                    <h3> Créer un dépôt Git</h3>
+                    <p class="fs-sm">Initialisez un dépôt Git pour votre projet avec la commande <span style="background-color: #e7e7e7; padding: 3px; font-weight: 600;">git init.</span></p>
+                    <button class="btn-primary">Go to feature</button>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <i class="fa-solid fa-file-arrow-up fa-4x" style="color: blueviolet;"></i>
+                    <h3>Effectuer des commits réguliers</h3>
+                    <p class="fs-sm">Enregistrez vos changements avec des commits fréquents pour suivre l’évolution du projet.</p>
+                    <button class="btn-primary">Go to feature</button>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <i class="fa-solid fa-chart-diagram fa-4x" style="color: blueviolet;"></i>
+                    <h3>Utiliser des branches</h3>
+                    <p class="fs-sm">Créez des branches pour travailler sur des fonctionnalités ou des corrections sans perturber la branche principale.</p>
+                    <button class="btn-primary">Go to feature</button>
+                </div>
+            </div>
+            <div class="card col-3">
+                <div class="card-body">
+                    <i class="fa-brands fa-github fa-4x" style="color: blueviolet;"></i>
+                    <h3>Collaborer avec GitHub ou GitLab</h3>
+                    <p class="fs-sm">Utilisez des plateformes en ligne comme GitHub ou GitLab pour héberger votre code, faciliter les collaborations, et déployer vos projets.</p>
+                    <button class="btn-primary">Go to feature</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row-w" id="cards">
+        <div class="container flex-around" >
+
+            <div class="card col-4">
+                <img src="./images/image.jpg" alt="" class="card-img">
+                <div class="card-body">
+                    <h2 id="get-this">Hello <span style="background-color: #e7e7e7; padding: 5px;">world</span></h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam harum perspiciatis possimus veniam animi sint voluptas nulla corrupti inventore unde iste voluptates deleniti non, voluptatibus natus repellendus adipisci esse iure.</p>
+                    <button class="btn-primary" onclick="helloWorld()">More details ></button>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <img src="./images/image.jpg" alt="" class="card-img">
+                <div class="card-body">
+                    <h2>Hello world</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam harum perspiciatis possimus veniam animi sint voluptas nulla corrupti inventore unde iste voluptates deleniti non, voluptatibus natus repellendus adipisci esse iure.</p>
+                    <button class="btn-primary">More details ></button>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <img src="./images/image.jpg" alt="" class="card-img">
+                <div class="card-body">
+                    <h2>Hello world</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam harum perspiciatis possimus veniam animi sint voluptas nulla corrupti inventore unde iste voluptates deleniti non, voluptatibus natus repellendus adipisci esse iure.</p>
+                    <button class="btn-primary">More details ></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cta" class="bg-dark">
+        <div class="row">
+            <h1 class="lead">Explorez Git et lancez votre prochain projet web !</h1>
+            <p></p>
+            <a class="btn-primary" href="https://www.github.com">Commencer maintenant sur GitHub</a>
+        </div>
+    </section>
+
+    <section id="footer" class="bg-dark">
+
+            <hr class="mx">
+
+            <div class="flex-between">
+                
+                <span>© 2025 Rafik, </span>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                </div>
+            </div>
+
+    </section>
 
 
 <script src="script.js"></script>
