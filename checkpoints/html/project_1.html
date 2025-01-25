@@ -7,40 +7,99 @@
 </head>
 <body>
 
-    <nav id="navbar">
-        <div id="logo">
-            <img src="https://gomycode.com/tn/wp-content/uploads/sites/26/2023/05/Logotype-1.svg" alt="">
-        </div>
-        <div id="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">contact</a></li>
 
-            </ul>
-        </div>
-    </nav>   
+    <!-- navbar on click go to section -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
 
+    <!-- about section -->
     <section id="about">
-
+        <h2>About Me</h2>
+        <p>I'm passionate about creating web and mobile applications that are accessible to a wide audience through modern, interactive user interfaces.</p>
+        
+        <ul type="square">
+            <li><strong>Technologies : </strong>HTML, CSS, JavaScript, PHP, Python</li>
+            <li><strong>Stack : </strong> TALL Stack</li>
+            <li><strong>Frameworks: </strong> laravel, sveltekit, django</li>
+         </ul>
     </section>
 
+    <!-- work section -->
     <section id="work">
-
+        <h2>My Work</h2>
+        <table>
+           <thead>
+              <tr>
+                 <th>Project</th>
+                 <th>Description</th>
+                 <th>Technologies</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                 <td>Inventory management</td>
+                 <td>Web app to manage inventory and keep tracking of the stock</td>
+                 <td>HTML, CSS, JavaScript, PHP, MySQL</td>
+              </tr>
+              <tr>
+                 <td>Recruitment Management System</td>
+                 <td>Automate and manage organization's recruiting and staffing operations</td>
+                 <td>HTML, CSS, PHP, MySQL</td>
+              </tr>
+              <tr>
+                 <td>Mobile application</td>
+                 <td>tasks management</td>
+                 <td>React Native, Node.js</td>
+              </tr>
+           </tbody>
+        </table>
     </section>
 
+    <!-- resume section -->
     <section id="resume">
+        <h2>My Resume</h2>
+        <ul>
+           <li><strong>2015 - 2017: </strong> Junior web developer</li>
+           <li><strong>2017 - 2022: </strong> AWS Cloud engineer</li>
+           <li><strong>2022 - Present: </strong> Freelancer</li>
 
+        </ul>
+        <p>Github link : <a href="https://github.com"> My Github profile</a></p>  
     </section>
 
+    <!-- contact section -->
     <section id="contact">
-        
+        <h2>Contact Me</h2>
+         <!-- HTML FORM -->
+        <form action="#" method="post">
+            <!-- Full Name field with label -->
+            <label for="name">Full name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- email field -->
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- textarea field form message-->
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- submit button to send form data -->
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
 
+    <!-- footer -->
     <footer>
-        
+        <p>Author: GomyCode HTML checkpoint</p>
+        <p><a href="mailto:test@example.com">test@example.com</a></p>
     </footer>
 </body>
 </html>
