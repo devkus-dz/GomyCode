@@ -64,4 +64,4 @@
 
 ## 17.Vous pouvez taper git config --global pour savoir comment faire.
 
-<!-- ![step 17.](/images/captures/step-17.JPG "step-17") -->
+![step 17.](/images/captures/step-17.JPG "step-17")
