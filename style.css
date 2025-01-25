@@ -5,17 +5,23 @@ body {
   padding: 0;
   font-family: "Roboto", serif;
   font-size: 1rem;
-  /* letter-spacing: 3px; */
   line-height: 1.6;
 }
 
 .mx {
   margin: 10px 0;
 }
+.my {
+  margin: 0 5px;
+}
 
 .bg-dark {
   background-color: #3d003d;
   color: #fff;
+}
+
+.bg-light {
+  background-color: #fff;
 }
 
 .lead {
@@ -106,7 +112,8 @@ h4 {
 }
 
 .btn-primary:hover {
-  background-color: #bb9fd3;
+  background-color: #fff;
+  color: blueviolet;
   cursor: pointer;
 }
 
@@ -197,7 +204,7 @@ a:hover {
 hr {
   width: 100%;
   border-top: 1px solid blueviolet;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
 }
 
@@ -223,12 +230,10 @@ hr {
 }
 
 #cta {
-  height: 200px;
-  /* background-color: #2c2c2c; */
-  /* color: #fff; */
   text-align: center;
 }
 
 #footer {
-  padding: 20px 10vw;
+  background-color: #fff;
+  padding: 10px 10vw;
 }
