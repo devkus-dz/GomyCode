@@ -23,12 +23,14 @@
                         <li><a href="#" class="txt-primary">About us</a></li>
                         <li><a href="#">Career</a></li>
                         <li class="dropdown"> 
-                            <button class="dropdown-btn">Departments</button> 
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
+                            <button class="dropdown-link">Departments</button> 
+                                <ul class="dropdown-content" type="none">
+                                    <li><a href="/department?dep=marketing">Marketing &amp; PR</a></li>
+                                    <li><a href="/department?dep=customer">Customer Success &amp; Sales</a></li>
+                                    <li><a href="/department?dep=it">IT, Product, Data</a></li>
+                                    <li><a href="/department?dep=finance">Finance &amp; Administration</a></li>
+                                    <li><a href="/department?dep=hr">HR &amp; more</a></li>
+                                </ul>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +52,7 @@
         <section id="services" class="container">
             <div class="grid-features">
                 <!-- Service -->
-                <div class="card bg-primary-light txt-light">
+                <div class="card bg-primary-light txt-light s-glow fadeInUp-05">
                     <div class="feature-card-header">
                         <img src="https://www.docplanner.com/icons/icon-patients.svg" width="25" height="25">
                         <h1 class="txt-light" style="margin: 8px 0;">for patients</h1>
@@ -78,7 +80,7 @@
                 </div>
 
                 <!-- Service -->
-                <div class="card bg-secondary txt-light">
+                <div class="card bg-secondary txt-light s-glow fadeInUp-1">
                     <div class="feature-card-header">
                         <img src="https://www.docplanner.com/icons/icon-doctors.svg" width="25" height="25">
                         <h1 class="txt-light" style="margin: 8px 0;">For doctors</h1>
@@ -104,7 +106,7 @@
                     </div>
                 </div>
                 <!-- Service -->
-                <div class="card bg-dark txt-light">
+                <div class="card bg-dark txt-light s-glow fadeInUp-15">
                     <div class="feature-card-header">
                         <img src="https://www.docplanner.com/icons/icon-clinics.svg" width="25" height="25">
                         <h1 class="txt-light" style="margin: 8px 0;">For clinics</h1>
@@ -185,32 +187,31 @@
 
                     <li class="jameda">
                         <a href="https://www.jameda.de/" target="_blank">
-                            <img src="https://www.docplanner.com/logos/logo-jameda.svg" style="height: 25px;">
+                            <img src="https://www.docplanner.com/logos/logo-jameda.svg" style="height: 20px;">
                         </a>
                     </li>
                     <li class="tuotempo">
                         <a href="https://www.tuotempo.com" target="_blank">
-                            <img src="https://www.docplanner.com/logos/logo-tuotempo.svg" style="height: 20px;">
+                            <img src="https://www.docplanner.com/logos/logo-tuotempo.svg" style="height: 17px;">
                         </a>
                     </li>
-                    <li class="gipo">
+                    <li class="flex-between">
                         <a href="https://www.gipo.it/" target="_blank">
-                            <img src="https://www.docplanner.com/logos/logo-gipo-primary.svg" style="height: 50px;">
+                            <img src="https://www.docplanner.com/logos/logo-gipo-primary.svg" style="height: 38px;">
                         </a>
                         <a href="https://clinic-cloud.com/" target="_blank">
-                            <img src="https://www.docplanner.com/logos/logo-clinicloud.svg" style="height: 40px;">
+                            <img src="https://www.docplanner.com/logos/logo-clinicloud.svg" style="height: 33px;">
                         </a>
-
                     </li>
 
                     <li class="feegow">
                         <a href="https://feegowclinic.com.br/" target="_blank">
-                            <img src="https://www.docplanner.com/logos/logo-feegow.svg" style="height: 30px;">
+                            <img src="https://www.docplanner.com/logos/logo-feegow.svg" style="height: 25px;">
                         </a>
                     </li>
                     <li class="mydr">
                         <a href="https://mydr.pl/welcome/" target="_blank">
-                            <img src="https://www.docplanner.com/logos/my-dr-edm-logo.svg" style="height: 30px;">
+                            <img src="https://www.docplanner.com/logos/my-dr-edm-logo.svg" style="height: 25px;">
                         </a>
                     </li>
                    
@@ -226,12 +227,12 @@
                 </div>
                 <div class="col-2 flex-around">
                     <div class="flex-col">
-                        <div class="stats-item">
+                        <div class="stats-item fadeInUp-1">
                             <img scr="https://www.docplanner.com/img/flag.png" srcset="https://www.docplanner.com/img/flag.png 1x, https://www.docplanner.com/img/flag@2x.png 2x">
                             <h3>Leader in 13 countries</h3>
                             <p>Poland, Brazil, Mexico, Spain, Italy, Germany, Turkey, Colombia, Czech Republic, Portugal, Argentina, Peru and Chile</p>
                         </div>
-                        <div class="stats-item">
+                        <div class="stats-item fadeInUp-1">
                             <img scr="https://www.docplanner.com/img/patients.png" srcset="https://www.docplanner.com/img/patients.png 1x, https://www.docplanner.com/img/patients@2x.png 2x">
                             <h3>80,000,000 <br> patients</h3>
                             <p>visit our websites each month</p>
@@ -239,12 +240,12 @@
                         
                     </div>
                     <div class="flex-col"style="margin-top: -30px;">
-                        <div class="stats-item">
+                        <div class="stats-item fadeInUp-1">
                             <img scr="https://www.docplanner.com/img/visits.png" srcset="https://www.docplanner.com/img/visits.png 1x, https://www.docplanner.com/img/visits@2x.png 2x">
                             <h3>22,000,000 appointments</h3>
                             <p>booked last month</p>
                         </div>
-                        <div class="stats-item">
+                        <div class="stats-item fadeInUp-1">
                             <img scr="https://www.docplanner.com/img/doctors.png" srcset="https://www.docplanner.com/img/doctors.png 1x, https://www.docplanner.com/img/doctors@2x.png 2x">
                             <h3>260,000<br> active doctors</h3>
                             <p>trust our solutions</p>
@@ -279,7 +280,7 @@
                                 <img src="https://www.docplanner.com/images/barcelona.png" class="card-img"/>
                             </figure>
                             <div class="flex-between office-description">
-                               <span>barcelona</span>
+                               <span class="txt-capitalize">barcelona</span>
                                 <span class="btn">SEE OPENINGS</span>
                             </div>
                         </div>
@@ -333,7 +334,7 @@
                                 <img src="https://www.docplanner.com/images/rio-janeiro.png" class="card-img"/>
                             </figure>
                             <div class="flex-between office-description">
-                               <span>rio de janeiro</span>
+                               <span class="txt-capitalize">rio de janeiro</span>
                                 <span class="btn">SEE OPENINGS</span>
                             </div>
                         </div>
@@ -342,7 +343,7 @@
                                 <img src="https://www.docplanner.com/images/mexico-city.png" class="card-img"/>
                             </figure>
                             <div class="flex-between office-description">
-                               <span>Mexico city</span>
+                               <span class="txt-capitalize">Mexico city</span>
                                 <span class="btn">SEE OPENINGS</span>
                             </div>
                         </div>
@@ -351,7 +352,7 @@
                                 <img src="https://www.docplanner.com/images/bogota.png" class="card-img"/>
                             </figure>
                             <div class="flex-between office-description">
-                               <span>bogota</span>
+                               <span class="txt-capitalize">bogota</span>
                                 <span class="btn">SEE OPENINGS</span>
                             </div>
                         </div>
@@ -360,7 +361,7 @@
                                 <img src="https://www.docplanner.com/images/amsterdam.png" class="card-img"/>
                             </figure>
                             <div class="flex-between office-description">
-                               <span>amsterdam</span>
+                               <span class="txt-capitalize">amsterdam</span>
                                 <span class="btn">SEE OPENINGS</span>
                             </div>
                         </div>
