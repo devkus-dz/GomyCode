@@ -45,7 +45,7 @@ h1,
 }
 
 .wrapper {
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -85,8 +85,9 @@ nav {
   padding: 0;
 }
 
-.menu ul li a:link {
-  color: var(--default-color);
+.menu ul li a:link,
+.menu ul li a:-webkit-any-link {
+  color: #fff;
   text-decoration: none;
 }
 
@@ -94,12 +95,13 @@ nav {
   color: var(--primary);
 }
 
-a:link {
+a:link,
+a:-webkit-any-link {
   text-decoration: none;
   color: var(--accent-l);
   font-weight: 600;
 }
-a:visited,
+
 a:hover,
 a:active {
   text-decoration: none;
