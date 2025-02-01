@@ -138,7 +138,7 @@ a:active {
   background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
   background-position: bottom; /* Centre la position de l'image */
   background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
-  background-image: url("/images/programmer-1.jpg");
+  background-image: url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   height: 100vh;
 }
 
