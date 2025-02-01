@@ -5,202 +5,337 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Project</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="/checkpoints/css/project_1_resume/style.css">
 </head>
 <body>
 
 
     <!-- navbar on click go to section -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+    <nav class="sticky">
+        
+        <div id="logo">
+            <h1 class="txt-white"><span class="txt-primary">John</span> Doe</h1>
+        </div>
+        <div class="menu">
+            <ul class="flex-between">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <button class="btn-primary">Download CV</button>
+        </div>
+        
+
     </nav>
 
+
+    <section id="hero" class="parallax overlay">
+       
+            <h1 class="lead">I'm <span class="txt-primary">John</span> Doe</h1>
+            <h3>Fullstack Web Developper</h3>
+
+    </section>
+
     <div class="wrapper">
-        <aside class="col-30">
-            <!-- about section -->
-            <section id="about" class="card">
-                <div class="card-header">
-                    <img src="https://imgcdn.stablediffusionweb.com/2024/11/1/b51f49a9-82a1-4659-905d-c8cd8643bade.jpg" alt="Avatar" style="border-radius: 50%; margin: 30px auto;" width="250" height="250">
-                    <h2>About Me</h2>
+
+     <!-- about section -->
+        <section id="about" class="row">
+            <div class="flex-between">
+                <div class="col-1 animate__animated animate__fadeInUp">
+                    <img src="https://imgcdn.stablediffusionweb.com/2024/11/1/b51f49a9-82a1-4659-905d-c8cd8643bade.jpg" alt="Avatar" width="300" height="300" style="border-radius: 20px; margin-left: 100px;">
                 </div>
-                <div class="card-body">
-                    <p>I'm passionate about creating web and mobile applications that are accessible to a wide audience through modern, interactive user interfaces.</p>
+                <div class="col-2">
+                    <h2>John Doe</h2>
+                    <h3 class="txt-primary">Web Developper & Web Designer</h3>
+                    <p style="width: 80%;">I'm passionate about creating web and mobile applications that are accessible to a wide audience through modern, interactive user interfaces.</p>
                 
                     <ul type="square" style="margin-right: 0; padding: 0;">
-                        <li><strong>Technologies : </strong>HTML, CSS, JavaScript, PHP</li>
-                        <li><strong>Stack : </strong> TALL Stack</li>
-                        <li><strong>Frameworks: </strong> laravel, sveltekit</li>
+                        <li><strong class="txt-secondary">Technologies : </strong>HTML, CSS, JavaScript, PHP</li>
+                        <li><strong class="txt-secondary">Stack : </strong> TALL Stack</li>
+                        <li><strong class="txt-secondary">Frameworks: </strong> laravel, sveltekit</li>
                     </ul>
                 </div>
-                <div class="card-footer">
-                    <ul type="none" class="flex-around" style="padding: 0 15px;">
-                        <li><a href="#"><i class="fa-brands fa-github fa-2x"></i></a></i></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></i></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></i></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a></i></li>
+            </div>
+
+
+        </section>
+
+        <section id="skills" class="card">
+            <div class="card-header">
+                <h1 class="txt-center">Skills</h1>
+            </div>
+            
+            <div class="card-body">
+                <div class="skills-content flex-around">
+                    <ul class="col-2-5" type="none">
+                        <h2 class="txt-center txt-primary" style="margin: 40px;">Coding</h2>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">HTML / CSS</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 75%;">
+                                        <span class="progress-txt">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">PHP</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 85%;">
+                                        <span class="progress-txt">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Svelte.js</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 70%;">
+                                        <span class="progress-txt">70%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Python</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 80%;">
+                                        <span class="progress-txt">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="col-2-5" type="none">
+                        <h2 class="txt-center txt-primary" style="margin: 40px;">Web Development</h2>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">UX / UI</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 75%;">
+                                        <span class="progress-txt">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Web Design</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 90%;">
+                                        <span class="progress-txt">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Debian</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 80%;">
+                                        <span class="progress-txt">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Docker Containers</h3>
+                                <div class="progress-line">
+                                    <div class="progress animate__animated animate__fadeInLeft" style="width: 70%;">
+                                        <span class="progress-txt">70%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </section>
-        </aside>
+            </div>
+
+        </section>
+
 
         <div class="content">
             <!-- work section -->
-            <section id="work" class="card">
+            <section id="resume" class="card">
                 <div class="card-header">
-                    <h2>My Work</h2>
+                    <h2>Resume</h2>
                 </div>
-                <div class="card-body">
-                    <table>
-                        <thead> 
-                            <tr class="txt-primary">
-                                <th>Project</th>
-                                <th>Description</th>
-                                <th>Technologies</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Inventory management</td>
-                                <td>Web app to manage inventory and keep tracking of the stock</td>
-                                <td>HTML, CSS, JavaScript, PHP, MySQL</td>
-                            </tr>
-                            <tr>
-                                <td>Recruitment Management System</td>
-                                <td>Automate and manage organization's recruiting and staffing operations</td>
-                                <td>HTML, CSS, PHP, MySQL</td>
-                            </tr>
-                            <tr>
-                                <td>Mobile application</td>
-                                <td>tasks management</td>
-                                <td>React Native, Node.js</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body flex-around">
+                    <div class="col-2-5">
+                        <h2 class="txt-center txt-primary" style="margin: 40px;">Education</h2>
+                        <ul class="timeline-vertical"> 
+                            <li>
+                                <h3 class="title">2024-current<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">Master in computer science</h4>
+                                    <small class="txt-primary">GomyCode</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">2020-2022<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">bachelor in computer science</h4>
+                                    <small class="txt-primary">University of Study</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">2018-2020<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">Web Developer Certificate</h4>
+                                    <small class="txt-primary">University of Study</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2-5">
+                        <h2 class="txt-center txt-primary" style="margin: 40px;">Experience</h2>
+                        <ul class="timeline-vertical"> 
+                            <li>
+                                <h3 class="title">2024-current<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">Web Developer - Freelance</h4>
+                                    <small class="txt-primary">Company name</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">2020-2024<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">Fullstack web developer</h4>
+                                    <small class="txt-primary">Company name</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">2017-2020<h3/>
+                                <div class="details">
+                                    <h4 style="margin: 5px 0;">System administrator</h4>
+                                    <small class="txt-primary">Company name</small>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <div class="card-footer">
+                    <h2 class=" txt-center txt-primary" style="margin: 40px;">Languages</h2>
+
+                    <ul type="none">
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">Arabic</h3>
+                                <div class="progress-line">
+                                    <div class="progress" style="width: 99%;">
+                                        <span class="progress-txt">99%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">French</h3>
+                                <div class="progress-line">
+                                    <div class="progress" style="width: 90%;">
+                                        <span class="progress-txt">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="progress-bar">
+                                <h3 class="progress-title">English</h3>
+                                <div class="progress-line">
+                                    <div class="progress" style="width: 80%;">
+                                        <span class="progress-txt">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
                
             </section>
 
-            <!-- resume section -->
-            <section id="resume" class="card">
+        
+            <section id="work" class="card">
                 <div class="card-header">
-                    <h2>My Resume</h2>
+                    <h2>Work</h2>
                 </div>
                 
                 <div class="card-body">
-                    <h3>Training :</h3>
-                    <ul>
-                        <li><strong>Web Developer certificate : </strong>XYZ School</li>
-                        <li><strong>Bachelor degree in computer science : </strong> <img src="https://gomycode.com/tn/wp-content/uploads/sites/26/2023/05/Logotype-1.svg" alt="GomyCode"></li>
-                        <li>
-                            More about <img src="https://gomycode.com/tn/wp-content/uploads/sites/26/2023/05/Logotype-1.svg" alt="GomyCode"> : 
-                            <iframe width="420" height="315" src=https://www.youtube.com/embed/WvLZ6s4MFd8?autoplay=1&mute=1"></iframe>
-                        </li>
-                    </ul>
-
-                    <h3>Professional experience :</h3>
-                    <div id="timeline-experience">                   
-                        <!-- Timeline -->
-                        <div class="single-horizontal-timeline col-4">
-                            <div class="experience-time">
-                                <h2>2015 - 2017</h2>
-                                <h3>master <span>of</span> computer science</h3>
+                    <div class="grid">
+                        <div class="card">
+                            <div class="card-header m-0 p-0">
+                                <img src="/images/pexels-joshsorenson-1714208.jpg" alt="" class="card-img">
                             </div>
-                            <div class="timeline-horizontal-border"><i class="fa fa-circle fa-xs txt-primary" aria-hidden="true" style="padding:3px;"></i> <span class="single-timeline-horizontal"></span></div>
-                            <div class="timeline-content">
-                                <h4 class="title">university of north carolina</h4>
-                                <h5>north carolina, USA</h5>
-                                <p class="description"> Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.</p>
-                            </div>
+                            <div class="card-body">
+                                <h4 class="txt-primary">Project 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tenetur incidunt quod</p>
+                                <button class="btn-primary" style="width: 100px; ">visit</button>
+                            </div>  
                         </div>
-                        <!-- Timeline -->
-                        <div class="single-horizontal-timeline col-4">
-                            <div class="experience-time">
-                                <h2>2015 - 2017</h2>
-                                <h3>master <span>of</span> computer science</h3>
+                        <div class="card">
+                            <div class="card-header m-0 p-0">
+                                <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="card-img">
                             </div>
-                            <div class="timeline-horizontal-border"><i class="fa fa-circle fa-xs txt-primary" aria-hidden="true" style="padding:3px;"></i> <span class="single-timeline-horizontal"></span></div>
-                            <div class="timeline-content">
-                                <h4 class="title">university of north carolina</h4>
-                                <h5>north carolina, USA</h5>
-                                <p class="description"> Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.</p>
-                            </div>
+                            <div class="card-body">
+                                <h4 class="txt-primary">Project 2</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tenetur incidunt quod</p>
+                                <button class="btn-primary" style="width: 100px; ">visit</button>
+                            </div>  
                         </div>
-                        <!-- Timeline -->
-                        <div class="single-horizontal-timeline col-4">
-                            <div class="experience-time">
-                                <h2>2015 - 2017</h2>
-                                <h3>master <span>of</span> computer science</h3>
+                        <div class="card">
+                            <div class="card-header m-0 p-0">
+                                <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="card-img">
                             </div>
-                            <div class="timeline-horizontal-border"><i class="fa fa-circle fa-xs txt-primary" aria-hidden="true" style="padding:3px;"></i> <span class="single-timeline-horizontal"></span></div>
-                            <div class="timeline-content">
-                                <h4 class="title">university of north carolina</h4>
-                                <h5>north carolina, USA</h5>
-                                <p class="description"> Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.</p>
-                            </div>
+                            <div class="card-body">
+                                <h4 class="txt-primary">Project 3</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tenetur incidunt quod</p>
+                                <button class="btn-primary" style="width: 100px; ">visit</button>
+                            </div>  
                         </div>
-                        <!-- Timeline -->
-                        <div class="single-horizontal-timeline col-4">
-                            <div class="experience-time">
-                                <h2>2015 - 2017</h2>
-                                <h3>master <span>of</span> computer science</h3>
-                            </div>
-                            <div class="timeline-horizontal-border"><i class="fa fa-circle fa-xs txt-primary" aria-hidden="true" style="padding:3px;"></i> <span class="single-timeline-horizontal"></span></div>
-                            <div class="timeline-content">
-                                <h4 class="title">university of north carolina</h4>
-                                <h5>north carolina, USA</h5>
-                                <p class="description"> Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.</p>
-                            </div>
-                        </div>
-
-                    </div> 
-
-                    <h3>Languages :</h3>
-                    <ul>
-                        <li>
-                            <strong>Arabic :  </strong>
-                            <div class="progress-bar">
-                                <div class="progress-line">
-                                    <div class="progress" style="width: 30%;"></div>
-                                </div>
-                                <h3 class="txt-primary">30%</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Arabic :  </strong>
-                            <div class="progress-bar">
-                                <div class="progress-line">
-                                    <div class="progress" style="width: 30%;"></div>
-                                </div>
-                                <h3 class="txt-primary">30%</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Arabic :  </strong>
-                            <div class="progress-bar">
-                                <div class="progress-line">
-                                    <div class="progress" style="width: 30%;"></div>
-                                </div>
-                                <h3 class="txt-primary">30%</h3>
-                            </div>
-                        </li>
-                    </ul>
+                    </div>
                 </div>                
             </section>
 
-            <!-- contact section -->
             <section id="contact" class="card">
                 <div class="card-header">
                     <h2>Contact Me</h2>
                 </div>
                 <div class="card-body flex-between">
+                    <div id="infos" class="w-50">
+                        <div style="display: flex; gap: 20px; flex-direction: column; align-items: center; text-align: center;">
+                            <img src="https://imgcdn.stablediffusionweb.com/2024/11/1/b51f49a9-82a1-4659-905d-c8cd8643bade.jpg" alt="Avatar" style="border-radius: 20px;" width="150" height="150">
+                            <div>
+                                <h3>John Doe</h3>
+                                <h4 class="txt-primary">Full-Stack Web Developer</h4>
+                                <ul type="none" class="flex-between" style="padding: 0;">
+                                    <li><a href="#"><i class="fa-brands fa-github fa-lg"></i></a></i></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></i></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></i></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin fa-lg"></i></a></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div id="contact-form" class="w-50">
                         <!-- HTML FORM -->
                         <form action="#" method="post">
@@ -219,29 +354,17 @@
 
                             <!-- textarea field form message-->
                             <label for="message">Message <span class="txt-primary"> *</span></label>
-                            <textarea id="message" name="message" rows="10" placeholder="Leave us a message" required></textarea>
+                            <textarea id="message" name="message" rows="10" placeholder="Leave a message" required></textarea>
 
                             <!-- submit button to send form data -->
                             <button type="submit" class="btn-primary">Envoyer</button>
                         </form>
                     </div>
-                    <div id="infos" class="w-50">
-                        <div style="display: flex; gap: 20px; align-items: center;">
-                            <img src="https://imgcdn.stablediffusionweb.com/2024/11/1/b51f49a9-82a1-4659-905d-c8cd8643bade.jpg" alt="Avatar" style="border-radius: 10%;" width="90" height="90">
-                            <div>
-                                <h3>John Doe</h3>
-                                <small>Full-Stack Web Developer</small>
-                            </div>
-                        </div>
 
-                        <div class="">
-                            <ul type="none" class="flex-around" style="padding: 0 15px;">
-                                <li><a href="#"><i class="fa-brands fa-github fa-lg"></i></a></i></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></i></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></i></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin fa-lg"></i></a></i></li>
-                            </ul>
-                        </div>
+
+
+
+ 
                     </div>
                     
                 </div>
@@ -250,10 +373,11 @@
         </div>
     </div>
     <!-- footer -->
-    <footer>
-        <p>GomyCode HTML checkpoint</p>
-        <p>© 2025</p>
-        <p>Github : <a href="https://github.com">Github profile</a></p>  
+    <footer class="wrapper">
+        <div class="card flex-between">
+            <p>© 2025, GomyCode HTML checkpoint</p>
+        </div>
+
     </footer>
 </body>
 </html>
