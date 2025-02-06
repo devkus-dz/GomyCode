@@ -1,0 +1,93 @@
+:root {
+  box-sizing: border-box;
+  --danger: #dc3545;
+}
+*,
+*::before,
+*::after,
+*::marker {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.nav-link:hover {
+  color: var(--danger) !important;
+}
+
+.f-amatic {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 900;
+}
+
+h1,
+#logo {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 900;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 750px;
+  color: #fff;
+}
+
+#hero h3 {
+  background-color: rgba(229, 88, 18, 0.6);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.overlay {
+  border-image: fill 1
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.2) 100%);
+  transition: 0.5s ease;
+}
+
+.parallax {
+  background-attachment: fixed; /* Fixe l'image pendant le scroll */
+  background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
+  background-position: center; /* Centre la position de l'image */
+  background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
+  background-image: url("https://images.pexels.com/photos/1082342/pexels-photo-1082342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 100vh;
+}
+
+#left-gallery img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+#right-gallery img {
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px !important;
+}
+
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: var(--danger) !important;
+}
