@@ -1,0 +1,462 @@
+:root {
+  box-sizing: border-box;
+  /* palette 60 30 10*/
+  --default-color: white;
+  --primary: #e55812;
+  --secondary: #55433b;
+  --accent-l: #bda79e;
+  --accent-d: #dfe0df;
+  --px-image: url("https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/11/Elden-Ring-Key-Art-e1637061164566.jpg");
+}
+*,
+*::before,
+*::after,
+*::marker {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #fff;
+  width: 100%;
+  line-height: 1.5rem;
+  color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+h2,
+h1,
+.txt-upc {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper-fluid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+
+.x-m-0 {
+  margin: 0 !important;
+}
+
+.x-p-0 {
+  padding: 0 !important;
+}
+
+.x-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.x-lead {
+  font-size: 3em;
+}
+
+.x-overlay {
+  border-image: fill 1
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.x-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: var(--px-image);
+  height: 100%;
+}
+
+.x-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.price {
+  position: absolute;
+  padding: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1em;
+  top: 15px;
+  right: 10px;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+.x-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.x-card-header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid #f9f9f9;
+  margin: 15px auto;
+  padding: 15px 0;
+  position: relative;
+}
+
+.x-card-body {
+  padding: 0px 20px 20px;
+}
+
+.x-card-footer {
+  width: 100%;
+  border-top: 2px solid #f9f9f9;
+  margin: 0 auto;
+  padding: 20px 40px 20px 40px;
+}
+
+.x-card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px 20px 0 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1.2rem;
+}
+
+input {
+  margin: 0.5rem 0 1.2rem 0;
+  padding: 1rem;
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid var(--primary);
+  outline: none;
+}
+
+textarea {
+  background-color: #f9f9f9;
+  margin: 0.5rem 0 1.2rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea:focus {
+  border: 1px solid var(--primary);
+  outline: none;
+}
+
+.x-btn-primary {
+  width: 120px;
+  background-color: var(--primary);
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem;
+  width: 100%;
+  font-weight: 600;
+}
+
+.x-btn-primary:hover {
+  background-color: #fff;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+small {
+  font-size: 0.7em;
+}
+
+.txt-primary {
+  color: var(--primary);
+}
+
+.txt-secondary {
+  color: var(--secondary);
+}
+
+.txt-accent-l {
+  color: var(--accent-l);
+}
+
+.txt-accent-d {
+  color: var(--accent-d);
+}
+
+.txt-white {
+  color: #fff;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.x-bg-primary {
+  background-color: var(--primary);
+}
+
+.x-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.x-bg-accent-l {
+  background-color: var(--accent-l);
+}
+
+.x-bg-accent-d {
+  background-color: var(--accent-d);
+}
+
+.x-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.x-flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.x-flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 750px;
+  color: #fff;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  [class*="x-col-"] {
+    float: none;
+    padding: 10px;
+  }
+
+  .x-col-xs-1 {
+    width: 8.33%;
+  }
+
+  .x-col-xs-2 {
+    width: 16.66%;
+  }
+
+  .x-col-xs-3 {
+    width: 25%;
+  }
+
+  .x-col-xs-4 {
+    width: 33.33%;
+  }
+
+  .x-col-xs-5 {
+    width: 41.66%;
+  }
+
+  .x-col-xs-6 {
+    width: 50%;
+  }
+
+  .x-col-xs-7 {
+    width: 58.33%;
+  }
+
+  .x-col-xs-8 {
+    width: 66.66%;
+  }
+
+  .x-col-xs-9 {
+    width: 75%;
+  }
+
+  .x-col-xs-10 {
+    width: 83.33%;
+  }
+
+  .x-col-xs-11 {
+    width: 91.66%;
+  }
+
+  .x-col-xs-12 {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  [class*="x-col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .x-col-sm-1 {
+    width: 8.33%;
+  }
+
+  .x-col-sm-2 {
+    width: 16.66%;
+  }
+
+  .x-col-sm-3 {
+    width: 25%;
+  }
+
+  .x-col-sm-4 {
+    width: 33.33%;
+  }
+
+  .x-col-sm-5 {
+    width: 41.66%;
+  }
+
+  .x-col-sm-6 {
+    width: 50%;
+  }
+
+  .x-col-sm-7 {
+    width: 58.33%;
+  }
+
+  .x-col-sm-8 {
+    width: 66.66%;
+  }
+
+  .x-col-sm-9 {
+    width: 75%;
+  }
+
+  .x-col-sm-10 {
+    width: 83.33%;
+  }
+
+  .x-col-sm-11 {
+    width: 91.66%;
+  }
+
+  .x-col-sm-12 {
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  [class*="x-col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .x-col-1 {
+    width: 8.33%;
+  }
+
+  .x-col-2 {
+    width: 16.66%;
+  }
+
+  .x-col-3 {
+    width: 25%;
+  }
+
+  .x-col-4 {
+    width: 33.33%;
+  }
+
+  .x-col-5 {
+    width: 41.66%;
+  }
+
+  .x-col-6 {
+    width: 50%;
+  }
+
+  .x-col-7 {
+    width: 58.33%;
+  }
+
+  .x-col-8 {
+    width: 66.66%;
+  }
+
+  .x-col-9 {
+    width: 75%;
+  }
+
+  .x-col-10 {
+    width: 83.33%;
+  }
+
+  .x-col-11 {
+    width: 91.66%;
+  }
+
+  .x-col-12 {
+    width: 100%;
+  }
+}
