@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Blog</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <style type="text/tailwindcss">  
+      @layer utilities {
+
+        h1,h2,h3,h4,h5,h6{
+          @apply font-montserrat;
+        }
+        .parallax{
+          @apply bg-fixed bg-no-repeat bg-cover;
+        }
+
+        .btn{
+          @apply font-semibold text-lg bg-fuchsia-600 text-slate-100 px-6 py-2 rounded-md hover:text-fuchsia-600 hover:bg-white transition-all duration-300 ease-in;
+        }
+
+        .btn-outline{
+          @apply font-semibold text-lg border border-fuchsia-600 text-fuchsia-600 px-6 py-2 rounded-md hover:text-white hover:bg-fuchsia-600 transition-all duration-300 ease-in;
+        }
+
+        .card {
+          @apply flex flex-col rounded-xl bg-white p-8 my-6 border border-slate-200 shadow-md hover:shadow-xl overflow-hidden;
+        }
+
+        .h-card {
+          @apply flex flex-row rounded-xl bg-white p-8 my-6 border border-slate-200 shadow-md hover:shadow-xl overflow-hidden;
+        }
+
+        .card-header {
+          @apply pb-8 m-0 mb-8 text-center text-slate-800 border-b border-slate-200;
+        }
+
+        .card-body {
+          @apply p-4;
+        }
+
+        .card-footer{
+           @apply py-2 px-6 m-0 mt-2 border-slate-200
+        }
+
+        .section-title {
+          @apply text-center text-2xl font-bold text-gray-800 uppercase;
+        }
+
+        h2{
+          @apply text-3xl font-bold mb-2 uppercase text-fuchsia-600;
+        }
+
+        input{
+          @apply w-full my-2 outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in text-sm rounded-l-md py-3 px-2.5 ring shadow-sm hover:border-fuchsia-600 hover:ring-fuchsia-600/10 focus:border-fuchsia-600 focus:ring-fuchsia-600/10;
+        }
+
+        .tab-link{
+          @apply text-sm inline-block py-2 px-4 text-slate-800 hover:text-fuchsia-800 hover:bg-white rounded-lg transition-all duration-300 relative  mr-1;
+        }
+
+      }
+    </style>
+
+</head>
+<body class="font-roboto antialiased text-md md:text-lg">
+
+  <nav class="block w-full px-4 py-2 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]" >
+      <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800 max-w-screen-xl">
+          
+          <a href="#" class="mr-4 block cursor-pointer text-slate-600 font-bold font-gf text-4xl">
+              <span class="text-fuchsia-600">Fake</span> Blog
+          </a>
+      
+          <div class="flex flex-col">
+              <button
+              class="relative cursor-pointer ml-auto h-6 text-slate-600 max-h-[40px] w-6 max-w-[40px] select-none rounded-xl text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:shadow-none lg:hidden"
+              type="button" onclick="displayMenu()">
+                  <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                      </svg>
+                  </span>
+              </button>
+      
+              <div class="hidden transition duration-300 ease-in-out lg:block lg:flex lg:justify-between" id="menu">
+                  <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+                          <a href="#featured" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Featured</a>
+                      </li>
+                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+                          <a href="#categories" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Categories</a>
+                      </li>
+                      <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+                        <a href="#latest" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Latest</a>
+                      </li>
+                      <li class="flex items-center p-1 gap-x-2 text-slate-600">
+                          <a href="#cta" class="flex items-center btn !text-sm hover:!bg-transparent">Subscribe</a>
+                      </li>
+          
+                  </ul>
+              </div>
+          </div>
+
+
+
+      </div>
+  </nav>
+
+  <section id="hero" class="parallax bg-bottom" style="background-image: url('https://images.pexels.com/photos/9072216/pexels-photo-9072216.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');">
+      <div class="relative h-dvh text-white overflow-hidden">
+      <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      
+      <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">Welcome to <span class="font-gf bg-white p-2 rounded-lg text-slate-600 bg-opacity-75"><span class="text-fuchsia-600">Fake</span> Blog</span></h1>
+          <p class="text-xl md:text-2xl text-slate-200 mb-8 lg:w-[40%] w-[80%]">Dive into the world of video games with our latest news, exclusive interviews, and in-depth analysis. Join our community of passionate gamers and stay ahead in the gaming universe.</p>
+          <a href="#featured" class="btn">Explore Now <i class="fa-solid fa-arrow-down ml-2"></i></a>
+      </div>
+
+      </div>
+  </section>
+
+  <section id="featured" class="py-16">
+      <div class="container mx-auto px-3 flex flex-wrap">
+      <!-- Header Section -->
+      <div class="section-heading py-4 mb-6">
+        <h2 class="font-bold">At the moment</h2>
+        <h6 class="txt-uppercase font-medium">Explore featured articles in real time</h2>
+      </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+
+            <div class="card md:h-card !p-0 !m-0 !shadow-md hover:!shadow-xl md:!h-64 ">
+                <div class="card-header md:shrink-0 border-none md:!h-64 md:!w-64 !p-0 !m-0 relative">
+                  <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+                  <img class="w-full h-full md:w-64 object-cover rounded-lg" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dfx2ccq-ee903835-10ed-4a53-b8ad-53838fd6c838.jpg" alt="" class="">
+                </div>
+                <div class="md:flex md:flex-col md:justify-between m-0 p-6">
+                  <div class="card-body !m-0 !p-0">
+                    <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2">Reviews</span>
+                    <h3 class="font-semibold text-fuchsia-600 my-3">Game Review: The Legend of Zelda Tears of the Kingdom</h3>
+                    <p class="text-md">Discover why ‘Tears of the Kingdom’ is a must-play for every Zelda fan.</p>
+                  </div>
+                  <div class="card-footer !m-0 !p-0 flex justify-between items-center">
+                    <span class="text-xs text-slate-400">Feb 22, 2025</span>    
+                    <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="card md:h-card !p-0 !m-0 !shadow-md hover:!shadow-xl md:!h-64 ">
+              <div class="card-header md:shrink-0 border-none md:!h-64 md:!w-64 !p-0 !m-0 relative">
+                <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+                <img class="w-full h-full md:w-64 object-cover rounded-lg" src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="">
+              </div>
+              <div class="md:flex md:flex-col md:justify-between m-0 p-6">
+                <div class="card-body !m-0 !p-0">
+                  <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2">Tutorial</span>
+                  <h3 class="font-semibold text-fuchsia-600 my-3">5 Essential Tips for New Gamers</h3>
+                  <p class="text-md">New to gaming? Here are five essential tips to help you get started.</p>
+                </div>
+                <div class="card-footer !m-0 !p-0 flex justify-between items-center">
+                  <span class="text-xs text-slate-400">Feb 23, 2025</span>    
+                  <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+                </div>
+              </div>
+          </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+            
+            <div class="card-mini">
+              <div class="card-mini-header relative h-40 shrink-0">
+                <div class="absolute inset-0 bg-black opacity-10 hover:opacity-30 rounded-lg"></div>
+                <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_gG4R4Lv1.webp" alt="" class="">
+                <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">News</span>
+              </div>
+              <div class="my-3 flex flex-col">
+                <a class="font-semibold hover:text-fuchsia-600 cursor-pointer mb-1 !text-sm">The Evolution of Video Game Graphics: From Pixels to Photorealism</a>
+                <span class="text-xs text-slate-400">2 hours ago</span>
+              </div>
+            </div>
+
+            <div class="card-mini">
+              <div class="card-mini-header relative h-40 shrink-0">
+                <div class="absolute inset-0 bg-black opacity-10 hover:opacity-30 rounded-lg"></div>
+                <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_do6W3Kqb.webp" alt="" class="">
+                <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Reviews</span>
+              </div>
+              <div class="my-3 flex flex-col">
+                <a class="font-semibold hover:text-fuchsia-600 cursor-pointer mb-1 !text-sm">Top 10 Indie Games You Should Play in 2023</a>
+                <span class="text-xs text-slate-400">4 hours ago</span>
+              </div>
+            </div>
+
+            <div class="card-mini">
+              <div class="card-mini-header relative h-40 shrink-0">
+                <div class="absolute inset-0 bg-black opacity-10 hover:opacity-30 rounded-lg"></div>
+                <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_n8tr9yuI.webp" alt="" class="">
+                <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Community</span>
+              </div>
+              <div class="my-3 flex flex-col">
+                <a class="font-semibold hover:text-fuchsia-600 cursor-pointer mb-1 !text-sm">The Impact of Esports on the Gaming Industry</a>
+                <span class="text-xs text-slate-400">6 hours ago</span>
+              </div>
+            </div>
+
+            <div class="card-mini">
+              <div class="card-mini-header relative h-40 shrink-0">
+                <div class="absolute inset-0 bg-black opacity-10 hover:opacity-30 rounded-lg"></div>
+                <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_cWKJ9NAp.webp" alt="" class="">
+                <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Reviews</span>
+              </div>
+              <div class="my-3 flex flex-col">
+                <a class="font-semibold hover:text-fuchsia-600 cursor-pointer mb-1 !text-sm">Game Development 101: A Beginner’s Guide</a>
+                <span class="text-xs text-slate-400">12 hours ago</span>
+              </div>
+            </div>
+
+          </div>
+      </div>
+  </section>
+
+  <section id="categories" class="py-16 bg-slate-200 rounded-xl xl:rounded-full">
+    <div class="container mx-auto">
+
+        <div class="section-heading py-4 text-center mb-6">
+          <h2 class="font-bold">Browse by Category</h2>
+          <h6 class="txt-uppercase font-medium">Select a category to see more related content</h2>
+        </div>
+
+        <div class="relative tab-group py-4">
+            <div class="flex flex-wrap w-8/12 mx-auto justify-between bg-slate-100 p-1 relative rounded-xl" role="tablist">
+              <div class="absolute top-1 left-0.5 h-8 bg-white rounded-md shadow-sm transition-all duration-300 transform scale-x-0 translate-x-0 tab-indicator z-0"></div>
+                <a href="#" class="tab-link">Review</a>
+                <a href="#" class="tab-link">Community</a>
+                <a href="#" class="tab-link">Tutorial</a>
+                <a href="#" class="tab-link">News</a>
+                <a href="#" class="tab-link">E-Sport</a>
+            </div>
+
+            <div class="mt-8 tab-content-container">
+
+              <div id="group-1" class="text-slate-500 text-sm block grid grid-cols-1 md:grid-cols-2 gap-6 xl:grid-cols-3">
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-evenly p-1">
+                    <span class="category text-xs text-fuchsia-600">E-Sports</span>
+                    <a  href="#" class="font-semibold text-lg">5 Essential Tips for New Gamers</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_cWKJ9NAp.webp" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-evenly p-1">
+                    <span class="category text-xs text-fuchsia-600">Reviews</span>
+                    <a  href="#" class="font-semibold text-lg">Game Development 101: A Beginner’s Guide</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_gG4R4Lv1.webp" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-evenly p-1">
+                    <span class="category text-xs text-fuchsia-600">News</span>
+                    <a  href="#" class="font-semibold text-lg">The Evolution of Video Game Graphics: From Pixels to Photorealism</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_do6W3Kqb.webp" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-evenly p-1">
+                    <span class="category text-xs text-fuchsia-600">Review</span>
+                    <a  href="#" class="font-semibold text-lg">5Top 10 Indie Games You Should Play in 2023</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_n8tr9yuI.webp" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-evenly p-1">
+                    <span class="category text-xs text-fuchsia-600">Community</span>
+                    <a  href="#" class="font-semibold text-lg">The Impact of Esports on the Gaming Industry</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-row w-full gap-4 hover:bg-white rounded-xl overflow-hidden">
+                  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dfx2ccq-ee903835-10ed-4a53-b8ad-53838fd6c838.jpg" alt="" class="w-40 h-full shrink-0 rounded-lg">
+                  <div class="content flex flex-col justify-between p-1">
+                    <span class="category text-xs text-fuchsia-600">Review</span>
+                    <a  href="#" class="font-semibold text-lg">Game Review: The Legend of Zelda Tears of the Kingdom</a>
+                    <span class="text-xs text-slate-500">Feb 13, 2025</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-6">
+            <button class="btn mx-auto mt-4">Browse all Posts</button>
+        </div>
+        
+    </div>
+  </section> 
+
+  <section id="latest" class="py-16">
+    <div class="container mx-auto">
+      <!-- Header Section -->
+      <div class="section-heading py-4 mb-6">
+        <h2 class="font-bold">Latest Gamin Updates</h2>
+        <h6 class="txt-uppercase font-medium">Stay informed with the newest gaming articles</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="card !p-0 !m-0">
+          <div class="card-header md:shrink-0 border-none md:!h-64 !p-0 !m-0 relative">
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+            <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_cWKJ9NAp.webp" alt="" class="">
+            <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Reviews</span>
+          </div>
+          <div class="card-body">
+            <h3 class="font-semibold text-fuchsia-600 mb-2 text-md">Game Development 101: A Beginner’s Guide</h3>
+            <p class="text-sm">Learn the basics of game development and how to start creating your own games.</p>
+          </div>
+          <div class="card-footer flex justify-between items-center">
+            <span class="text-xs text-slate-400">Feb 23, 2025</span>    
+            <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+          </div>
+        </div>
+
+        <div class="card !p-0 !m-0">
+          <div class="card-header md:shrink-0 border-none md:!h-64 !p-0 !m-0 relative">
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+            <img class="w-full h-full object-cover rounded-lg" src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="">
+            <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Tutorial</span>
+          </div>
+          <div class="card-body">
+            <h3 class="font-semibold text-fuchsia-600 mb-2 text-md">5 Essential Tips for New Gamers</h3>
+            <p class="text-sm">New to gaming? Here are five essential tips to help you get started.</p>
+          </div>
+          <div class="card-footer flex justify-between items-center">
+            <span class="text-xs text-slate-400">Feb 23, 2025</span>    
+            <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+          </div>
+        </div>
+
+        <div class="card !p-0 !m-0">
+          <div class="card-header md:shrink-0 border-none md:!h-64 !p-0 !m-0 relative">
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+            <img class="w-full h-full object-cover rounded-lg" src="https://demo-programmatic.10web.me/wp-content/uploads/2024/12/tenweb_media_n8tr9yuI.webp" alt="" class="">
+            <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Community</span>
+          </div>
+          <div class="card-body">
+            <h3 class="font-semibold text-fuchsia-600 mb-2 text-md">The Impact of Esports on the Gaming Industry</h3>
+            <p class="text-sm">Uncover how esports has transformed the gaming industry and its cultural significance.</p>
+          </div>
+          <div class="card-footer flex justify-between items-center">
+            <span class="text-xs text-slate-400">Feb 22, 2025</span>    
+            <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+          </div>
+        </div>
+
+        <div class="card !p-0 !m-0">
+          <div class="card-header md:shrink-0 border-none md:!h-64 !p-0 !m-0 relative">
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+            <img class="w-full h-full object-cover rounded-lg" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dfx2ccq-ee903835-10ed-4a53-b8ad-53838fd6c838.jpg" alt="" class="">
+            <span class="text-xs bg-fuchsia-600 text-white rounded-full py-1 px-2 absolute top-2 left-2">Reviews</span>
+          </div>
+          <div class="card-body">
+            <h3 class="font-semibold text-fuchsia-600 mb-2 text-md">Game Review: The Legend of Zelda Tears of the Kingdom</h3>
+            <p class="text-sm">Discover why Tears of the Kingdom is a must-play for every Zelda fan.</p>
+          </div>
+          <div class="card-footer flex justify-between items-center">
+            <span class="text-xs text-slate-400">Feb 22, 2025</span>    
+            <a href="#" class="btn-outline !p-2 !text-xs">Learn More >></a>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  </section>
+
+  <section id="cta" class="relative py-32 bg-slate-50 parallax bg-center" style="background-image: url('https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');">
+
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    <!-- Call To Action with parallax background-image & overlay -->
+    <div class="container mx-auto flex flex-col items-center">
+      <div class="z-10 h-full text-white overflow-hidden lg:w-2/3 text-center my-3">  
+        <h1 class="text-3xl font-bold">Join Our Gaming Community</h1>
+        <p class="text-lg py-3">Unlock exclusive content, in-depth reviews, and special insights. Elevate your gaming experience with Fake Blog!</p>
+      </div>
+      <div class="z-10 flex flex-row lg:w-1/3 w-2/3">
+        <input type="email" id="email" class="bg-white m-0 w-full "  placeholder="your email" required>
+        <button class="btn !m-0 !px-3 !text-sm !rounded-none !rounded-r-md">Subscribe</button>
+      </div>
+    </div>
+
+      
+  </section>
+
+  <footer class="py-8">
+    <div class="container text-sm p-4 flex flex-col md:flex-row items-center md:justify-evenly">
+      <p>© 2025 <span class="font-gf text-fuchsia-600 text-xl font-bold"> Fake Blog</span>, Tailwind CSS checkpoint</p>
+      <ul type="none" class="flex md:justify-between gap-8 my-4 md:m-0">
+        <li><a href="#" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Privacy</a></li>
+        <li><a href="#" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Terms</a></li>
+        <li><a href="#" class="flex items-center text-slate-600 hover:text-fuchsia-600 hover:underline font-semibold">Contact</a></li>
+      </ul>
+      <ul type="none" class="flex md:justify-between gap-8">
+        <li><a href="#"><i class="fa-brands fa-github fa-lg text-slate-500 hover:text-fuchsia-600"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook fa-lg text-slate-500 hover:text-fuchsia-600"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram fa-lg text-slate-500 hover:text-fuchsia-600"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin fa-lg text-slate-500 hover:text-fuchsia-600"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+   tailwind.config = {
+      theme : {
+        extend : {
+          screens:{
+            xs: "576px",
+          },
+          fontFamily: {
+            roboto: ["Roboto", "serif"],
+            montserrat: ["Montserrat", "serif"],
+            gf:["Grechen Fuemen", "serif"],
+          },
+        },
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '1rem',
+            xs:'0.5rem',
+            sm: '2rem',
+            lg: '4rem',
+            xl: '5rem',
+            '2xl': '6rem',
+          },
+        },
+      }
+    }
+
+    function displayMenu(){
+        let elem = document.getElementById("menu").classList.contains("hidden");
+        if (elem){
+            document.getElementById("menu").classList.remove("hidden");
+        }else{
+            document.getElementById("menu").classList.add("hidden");
+        }
+    }
+  </script>
+</body>
+</html>

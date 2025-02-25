@@ -19,7 +19,7 @@
         }
 
         .btn{
-          @apply font-semibold text-lg bg-orange-600 text-slate-100 px-8 py-2 rounded-md hover:text-orange-600 hover:bg-white;
+          @apply font-semibold text-lg bg-orange-600 text-slate-100 px-8 py-2 rounded-md hover:text-orange-600 hover:bg-white transition-all duration-300 ease-in;
         }
 
         .card {
@@ -73,33 +73,34 @@
         class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-bold text-xl">
         <span class="text-orange-600">JOHN</span> DOE
       </a>
-      
-      <div class="hidden lg:block">
-        <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#skills" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Skills</a>
-          </li>
-          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#resume" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Resume</a>
-          </li>
-          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#projects" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Projects</a>
-          </li>
-          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-            <a href="#contact" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <button
+      <div class="flex flex-col">
+        <button
         class="relative cursor-pointer ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-        type="button">
-        <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </span>
-      </button>
+        type="button" onclick="displayMenu()">
+          <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="hidden lg:block" id="menu">
+          <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+            <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+              <a href="#skills" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Skills</a>
+            </li>
+            <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+              <a href="#resume" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Resume</a>
+            </li>
+            <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+              <a href="#projects" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Projects</a>
+            </li>
+            <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+              <a href="#contact" class="flex items-center text-slate-600 hover:text-orange-600 hover:underline font-semibold">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
   </nav>
 
@@ -429,7 +430,7 @@
         <h1 class="section-title">projects</h1>
       </div>
 
-      <div class="card-body grid gsrid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="card-body grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div class="card !p-0 !m-0 !shadow-md hover:!shadow-xl z-[20]">
           <div class="card-header border-none h-[250px] !p-0 !m-0">
@@ -512,7 +513,7 @@
             <li><a href="#"><i class="fa-brands fa-facebook fa-lg text-slate-400 hover:text-orange-600"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-instagram fa-lg text-slate-400 hover:text-orange-600"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-linkedin fa-lg text-slate-400 hover:text-orange-600"></i></a></li>
-        </ul>
+          </ul>
         </div>
         <div class="w-full md:w-1/2 py-6">
           <!-- CONTACT FORM -->
@@ -563,6 +564,15 @@
           },
         }
       }
+    }
+
+    function displayMenu(){
+        let elem = document.getElementById("menu").classList.contains("hidden");
+        if (elem){
+            document.getElementById("menu").classList.remove("hidden");
+        }else{
+            document.getElementById("menu").classList.add("hidden");
+        }
     }
   </script>
 </body>
