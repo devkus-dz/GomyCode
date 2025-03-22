@@ -1,0 +1,39 @@
+Algorithm AnalyzeSentence
+
+VAR
+    lengthCounter, wordCounter, vowelCounter: INTEGER;
+    sentence, vowels: CHAR;
+
+BEGIN
+
+    lengthCounter := 0;
+    wordCounter := 0;
+    vowelCounter := 0;
+    vowels := "aeiouyAEIOUY";
+
+    READ(sentence);
+
+    n := sentence.length;
+
+    FOR i FROM 0 to n - 1 STEP 1 DO
+
+        IF (sentence[i] = ".") THEN
+            BREAK;
+        END IF
+
+        lengthCounter := lengthCounter + 1;
+        
+        IF (sentence[i] = " ") THEN
+            wordCounter := wordCounter + 1;
+        END IF
+
+        IF (sentence[i] IN vowels) THEN
+            vowelCounter := vowelCounter + 1;
+        END IF
+
+    END FOR
+    
+    WRITE( "characters count : ", lengthCounter);
+    WRITE( "words count : ", wordCounter);
+    WRITE( "vowels count : ", vowelCounter );
+END 
